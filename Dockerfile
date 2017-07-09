@@ -9,11 +9,11 @@ COPY package.json yarn.lock /app/
 RUN yarn
 
 # Build production
-RUN yarn run clean
-RUN yarn run build
+RUN npm run clean
+RUN npm run build
 
 # Serve production
-CMD yarn serve
+CMD npm serve
 
 # bundle app source code
 COPY . /app
