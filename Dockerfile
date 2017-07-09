@@ -13,7 +13,7 @@ RUN npm run clean
 RUN npm run build
 
 # Serve production
-CMD npm serve
+CMD npm run serve
 
 # bundle app source code
 COPY . /app
