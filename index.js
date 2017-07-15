@@ -6,7 +6,7 @@ import morgan from 'morgan'
 
 import routes from './routes'
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 4000
 const app = express()
 
 // app setup
@@ -14,6 +14,7 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(morgan('combined')) // TODO: configure later
+app.use(express.static('client'))
 
 // db setup
 // mongoose.connect('mongodb://localhost:db/db')
